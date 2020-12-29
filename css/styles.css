@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*up-arrow*/
+
+#btnscrolltotop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width:60px;
+    height: 60px;
+    font-size: 40px;
+    color:#073b4c;
+    border-radius: 50%;
+    box-shadow: 0 0 rgba(0,0,0,0.25 );
+    border:none;
+    cursor: pointer;
+    z-index: 1;
+    outline: none;
+    display: none;
+}
+#btnscrolltotop:hover{
+    color: #fff;
+    background-color: #073b4c ;
+
+}
+
+/*Start Header styling*/
+
+.landing-page-header{
+    background-image: url(../imgs/img1.jpg);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.overlay{
+    background-color: #073a4b66;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+/*Navigation bar*/
+nav{
+    margin-bottom:35% ;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 15px;
+    text-transform: capitalize;
+}
+nav ul li a{
+    color:#fff;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    color:#FFD166;
+}
+/*End nav*/
+
+.introduction-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+.introduction-text h1{
+    font-size: 30px;
+    color: #fff;
+}
+#land-color{
+    color: #FFD166;
+}
+.introduction-text p{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.introduction-text a {
+    margin : 20px;
+    text-decoration: none;
+    color: #FFD166;
+    border: 2px solid #FFD166;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    background: none;
+}
+.introduction-text a:hover {
+    color: #fff;
+    background-color: #FFD166;
+}
+
+/*End Header styling*/
+
+/* start section styling*/
+.section-1, .section-2, .section-3, .section-4{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+}
+/*general styling for section content*/
+.section-text {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #073b4c4d;
+    padding: 20px;
+}
+.section-text h1{
+    font-size: 30px;
+    color: #fff;
+}
+.section-text div{
+    margin-top: 100px;
+    width: 400px;
+}
+.section-text p{
+    font-size: 20px;
+    color: #fff;
+   
+}
+
+/*End general styling for section content*/
+
+/* Start each section style*/
+
+.section-1{
+    background-image: url('../imgs/img3.jpg');
+}
+.section-2{
+    background-image: url('../imgs/img4.jpg'); 
+}
+.section-3{
+    background-image: url('../imgs/img11.jpg');
+}
+
+.section-4{
+    background-image: url('../imgs/img14.jpg');
+}
+
+/* Active nav */
+.active{
+    color: #FFD166;
+    background-color: #ffffff33;
+    padding: 15px;
+}
+/* Active section */
+@keyframes active-sec{
+    0%{
+       opacity: 0;
+    }
+    100%{
+        opacity: 5;
+     } 
+}
+.active-section{
+    animation: active-sec 3s ;
+}
+.active-section .section-text h1 , .active-section .section-text p{
+    color:#ffe4a3;
+}
+
+/*End Section*/
+
+/*Start Footer styling*/
+footer{
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+/*End Footer*/
+
+
+/* Medium Screens */
+
+@media(min-width:600px) and (max-width:900px){
+
+    /*Start Header styling*/
+    /*Navigation bar*/
+    nav{
+        margin-bottom:14% ;
+    }
+    nav ul li{
+        padding: 30px;
+        font-size: 22px;
+    }
+    /*End nav*/
+    .introduction-text h1{
+        font-size: 38px;
+        color: #fff;
+    }
+    .introduction-text p{
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /*End Header styling*/
+
+    /* start general styling for section content*/
+    .section-text {
+        padding: 20px;
+        top: 50px;
+    }
+    .section-text h1{
+        font-size: 60px;
+    }
+    .section-text div{
+        width: 500px;
+    }
+    .section-text p{
+        font-size: 25px;
+    }
+    /*End general styling for section content*/
+}
+
+
+/* Large Screens */
+
+@media(min-width:900px){
+
+    /*Start Header styling*/
+    /*Navigation bar*/
+    nav{
+        margin-bottom:14% ;
+    }
+    nav ul li{
+        padding: 30px;
+        font-size: 22px;
+    }
+    li:hover{
+        color:#FFD166;
+    }
+    
+    /*End nav*/
+    .introduction-text h1{
+        font-size: 38px;
+    }
+    .introduction-text p{
+        font-size: 20px;
+    }   
+    /*End Header styling*/
+
+    /* start general styling for section content*/
+    .section-text {
+        padding: 20px;
+        top: 50px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .section-text h1{
+        font-size: 60px;
+    }
+    .section-text div{
+        margin-top: 100px;
+        width: 500px;
+    }
+    .section-text p{
+        font-size: 25px;
+    }
+    
+    /*End general styling for section content*/
+
+    /* Start each section style*/
+    .section-3 .section-text h1,
+    .section-3 .section-text p,
+    .section-1 .section-text h1,
+    .section-1 .section-text p{
+    color:#6e6e6e;
+    }
+    .section-1 .section-text {
+        left: 50px;
+    }
+    .section-2 .section-text {
+        right: 60px;
+    }
+    .section-3 .section-text {
+        left: 50px;
+    }
+    .section-4 .section-text {
+        right: 60px;
+    }
+    /* Active section */
+    @keyframes active-sec{
+    0%{
+       opacity: 0;
+    }
+    100%{
+        opacity: 5;
+     } 
+    }
+    .active-section{
+    animation: active-sec 3s ;
+    }
+    .active-section .section-text h1 , .active-section .section-text p{
+    color: #073b4c;
+    }
+}
